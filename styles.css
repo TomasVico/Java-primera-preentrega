@@ -43,3 +43,7 @@ body{
 #buscando{
     height: 25px;
 }
+#imagenes{
+    width: 50%;
+    height: auto;
+}

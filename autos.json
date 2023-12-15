@@ -1,0 +1,74 @@
+{
+    "autos": [
+      {
+        "marca": "Toyota",
+        "modelo": "Camry",
+        "anio": 2022,
+        "color": "Azul",
+        "imagen": "Autos/CAMRY.jpg"
+      },
+      {
+        "marca": "Honda",
+        "modelo": "Civic",
+        "anio": 2021,
+        "color": "Rojo",
+        "imagen": "Autos/CIVIC.jpg"
+      },
+      {
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "anio": 2023,
+        "color": "Negro",
+        "imagen": "Autos/MUSTANG.jpg"
+      },
+      {
+        "marca": "Chevrolet",
+        "modelo": "Camaro",
+        "anio": 2022,
+        "color": "Blanco",
+        "imagen": "Autos/CAMARO.jpg"
+      },
+      {
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "anio": 2020,
+        "color": "Gris",
+        "imagen": "Autos/GOLF.jpg"
+      },
+      {
+        "marca": "BMW",
+        "modelo": "X5",
+        "anio": 2023,
+        "color": "Plata",
+        "imagen": "Autos/BMW.jpg"
+      },
+      {
+        "marca": "Mercedes-Benz",
+        "modelo": "C-Class",
+        "anio": 2021,
+        "color": "Negro",
+        "imagen": "Autos/MERCEDES.webp"
+      },
+      {
+        "marca": "Audi",
+        "modelo": "A4",
+        "anio": 2022,
+        "color": "Azul",
+        "imagen": "Autos/AUDI.jpg"
+      },
+      {
+        "marca": "Tesla",
+        "modelo": "Model 3",
+        "anio": 2022,
+        "color": "Blanco",
+        "imagen": "Autos/TESLA.jpg"
+      },
+      {
+        "marca": "Nissan",
+        "modelo": "Altima",
+        "anio": 2021,
+        "color": "Plata",
+        "imagen": "Autos/ALTIMA.webp"
+      }
+    ]
+  }

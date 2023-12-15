@@ -1,3 +1,5 @@
+
+/*
 function Auto(marca, color, modelo, kilometros) {
     this.marca = marca;
     this.modelo = modelo;
@@ -77,6 +79,8 @@ botonagregar.addEventListener("click", function agregar() {
         <input id="marca-input" type="text" step="0.01" required><br>
         <label for="modelo-input"> Ingresá el modelo: </label>
         <input id="modelo-input" type="text" step="0.01" required><br>
+        <label for="anio-input"> Ingresá el año: </label>
+        <input id="anio-input" type="number" step="0.01" required><br>
         <label for="color-input"> Ingresá el color: </label>
         <input id="color-input" type="text" step="0.01" required>
 
@@ -87,15 +91,16 @@ botonagregar.addEventListener("click", function agregar() {
     formulario.addEventListener("submit", function (e) {
         e.preventDefault();
         const marcainput = document.getElementById("marca-input").value.trim().toLowerCase();
-        const modeloinput = parseFloat(document.getElementById("modelo-input").value);
+        const modeloinput = document.getElementById("modelo-input").value;
+        const anioinput = parseFloat(document.getElementById("anio-input").value);
         const colorinput = document.getElementById("color-input").value.trim();
 
-        if (marcainput === "" || colorinput === "" || isNaN(modeloinput)) {
+        if (marcainput === "" || colorinput === "" || isNaN(anioinput) || modeloinput === "") {
             Swal.fire("Ingresa datos validos");
             return;
         }
 
-        const vehiculo = new Auto(marcainput, modeloinput, colorinput);
+        const vehiculo = new Auto(marcainput, modeloinput, anioinput, colorinput);
         autosIniciales.push(vehiculo);
 
        
@@ -106,6 +111,8 @@ botonagregar.addEventListener("click", function agregar() {
     });
 
     body.appendChild(formulario);
+
+
     const botonvolver=document.createElement("button")
     botonvolver.innerHTML=`Volver al inicio`
     botonvolver.addEventListener("click",()=>{
@@ -141,24 +148,78 @@ mostrar.addEventListener("click", function () {
         container.appendChild(card);
     });
     body.appendChild(container)
-    mostrar.disabled=true
+    
     
     
     
     ;
-    const botonvolver=document.createElement("button")
+    
+
+
+    
+
+    
+
+    
+})
+*/
+
+let mostrar = document.getElementById("mostrar");
+mostrar.addEventListener("click", function () {
+url = "autos.json"
+fetch(url)
+.then((response)=>response.json())
+.then(datosAuto=>{
+    const autos= datosAuto.autos
+    const autoscontainer=document.getElementById("autos-container")
+    autos.forEach( auto => {
+        const elementoauto= document.createElement("div")
+        elementoauto.innerHTML=`<p>Marca: ${auto.marca}</p>
+        <p>Modelo: ${auto.modelo}</p>
+        <p>Color: ${auto.color}</p>
+        <p>Año: ${auto.anio}</p>
+        <img src="${auto.imagen}" id="imagenes">`
+        autoscontainer.appendChild(elementoauto)
+    });
+})
+.catch((error) => {
+    console.error("Error al obtener datos:");
+    swal.fire("Nazi")
+
+})
+const botonvolver=document.createElement("button")
     botonvolver.innerHTML=`Volver al inicio`
     botonvolver.addEventListener("click",()=>{
         window.location.href = document.referrer
     })
     body.appendChild(botonvolver)
-
-
-    
-
-    
-
-    
+    mostrar.disabled=true
 });
 
+/*
+let autos= data.results
+    autos.forEach((autos) => {
+        fetch(autos.url)
+        .then((response)=>response.json)
+        .then(datosAuto=>  {
+            const elementosAuto= document.createElement("div")
+            elementosAuto.innerHTML= `<h2>
+            
+            ${datosAuto.marca}
+            </h2>
+            <img src="${datosAuto.imagen}">`
+            autoscontainer.appendChild(elementosAuto)
 
+        } )
+        .catch(error=>{ 
+            console.error("Exploto todo")
+        })
+        
+    });
+})
+.catch(error=>{
+    console.error("exploto todito")
+})
+
+
+*/
