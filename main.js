@@ -184,7 +184,7 @@ fetch(url)
 })
 .catch((error) => {
     console.error("Error al obtener datos:");
-    swal.fire("Nazi")
+    swal.fire("Error")
 
 })
 const botonvolver=document.createElement("button")
@@ -218,7 +218,7 @@ let autos= data.results
     });
 })
 .catch(error=>{
-    console.error("exploto todito")
+    console.error("exploto todO")
 })
 
 
