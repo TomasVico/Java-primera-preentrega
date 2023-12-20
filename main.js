@@ -329,6 +329,7 @@ fetch(url)
 .then(data=>{   
     let paises=data
     const body=document.getElementById("body")
+    body.innerHTML=""
     const botonvolver=document.createElement("button")
     botonvolver.innerHTML=`Volver al inicio`
     botonvolver.addEventListener("click",()=>{
