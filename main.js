@@ -359,13 +359,13 @@ fetch(url)
             const paisnombre=paisdata[0].translations.spa.common
             elementopais.innerHTML=`<h4>País: ${paisnombre}</h4>
             <p>Capital (en inglés): ${paisdata[0].capital}</p>
-            <p>Continente: ${paisdata[0].region}</p>
-            <p>Bandera: </p>
+            <p>Continente 📍: ${paisdata[0].region}</p>
+            <p>Bandera 🏳: </p>
             <img id ="imagenes" src="${paisdata[0].flags.svg}" alt="${paisdata[0].translations.spa.common}">
-            <p>Población: ${paisdata[0].population.toLocaleString()} habitantes</p>
+            <p>Población 👥: ${paisdata[0].population.toLocaleString()} habitantes</p>
             <p>Países limítrofes: ${paisesLimitrofesNombres.join(', ')}</p>
-            <p>Superficie: ${paisdata[0].area.toLocaleString()} km²</p>
-            <p>Moneda: ${monedaNombre}. Símbolo: (${monedaSimbolo})</p>
+            <p>Superficie 🔍: ${paisdata[0].area.toLocaleString()} km²</p>
+            <p>Moneda 💰: ${monedaNombre}. Símbolo: (${monedaSimbolo})</p>
             <button class="fav-btn">Agregar a favoritos &#9733 </button>
             `;
 
@@ -419,20 +419,20 @@ fetch(url)
                 card.appendChild(capital);
 
                 const continente = document.createElement("p");
-                continente.textContent = `Continente: ${x.region}`;
+                continente.textContent = `Continente 📍: ${x.region}`;
                 card.appendChild(continente);             
 
 
                 const poblacion = document.createElement("p");
-                poblacion.textContent = `Población: ${x.population.toLocaleString()} `;
+                poblacion.textContent = `Población 👥: ${x.population.toLocaleString()} `;
                 card.appendChild(poblacion);
 
                 const area = document.createElement("p");
-                area.textContent = `Superficie: ${x.area.toLocaleString()} km²`;
+                area.textContent = `Superficie 🔍: ${x.area.toLocaleString()} km²`;
                 card.appendChild(area)
 
                 const bandera = document.createElement("p");
-                bandera.textContent = "Bandera: ";
+                bandera.textContent = "Bandera 🏳: ";
                 card.appendChild(bandera)
 
                 
@@ -496,20 +496,21 @@ fetch(url)
                 card.appendChild(capital);
 
                 const continente = document.createElement("p");
-                continente.textContent = `Continente: ${x.region}`;
+                continente.textContent = `Continente 📍: ${x.region}`;
                 card.appendChild(continente);             
 
+            
 
                 const poblacion = document.createElement("p");
-                poblacion.textContent = `Población: ${x.population.toLocaleString()} `;
+                poblacion.textContent = `Población 👥: ${x.population.toLocaleString()} `;
                 card.appendChild(poblacion);
 
                 const area = document.createElement("p");
-                area.textContent = `Superficie: ${x.area.toLocaleString()} km²`;
+                area.textContent = `Superficie 🔍: ${x.area.toLocaleString()} km²`;
                 card.appendChild(area)
 
                 const bandera = document.createElement("p");
-                bandera.textContent = "Bandera: ";
+                bandera.textContent = "Bandera 🏳: ";
                 card.appendChild(bandera)
 
                 
@@ -563,20 +564,20 @@ fetch(url)
                 card.appendChild(capital);
 
                 const continente = document.createElement("p");
-                continente.textContent = `Continente: ${x.region}`;
+                continente.textContent = `Continente 📍: ${x.region}`;
                 card.appendChild(continente);             
 
 
                 const poblacion = document.createElement("p");
-                poblacion.textContent = `Población: ${x.population.toLocaleString()} `;
+                poblacion.textContent = `Población 👥: ${x.population.toLocaleString()} `;
                 card.appendChild(poblacion);
 
                 const area = document.createElement("p");
-                area.textContent = `Superficie: ${x.area.toLocaleString()} km²`;
+                area.textContent = `Superficie 🔍: ${x.area.toLocaleString()} km²`;
                 card.appendChild(area)
 
                 const bandera = document.createElement("p");
-                bandera.textContent = "Bandera: ";
+                bandera.textContent = "Bandera 🏳: ";
                 card.appendChild(bandera)
 
                 
