@@ -7,29 +7,31 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-    <body id="body">
-    <h1> Bienvenido a automotores Coderhouse</h1>
+   
+    <h1> Bienvenido! Informate sobre cada país del mundo 🌍..</h1>
+    <div id="api-container"></div>-
     
-    <label for="texto"></label>
-    <button id="boton">Agregar auto </button> <br>
-    <button type="submit" id="buscar"> Buscar por marca</button> 
-    <input type="text" id="buscando"><br>
+        <select id="filtro">
+            <option value="País"> Buscar pais por nombre</option>
+            <option value="Capital">Buscar pais por su capital (en ingles)</option>
+            <option value="Continente">Buscar pais por continente</option>
+            
+            
+        </select>
+        
+        <input type="text" id="buscando">
+        <button class="medio" type="submit" id="buscar"> Buscar país</button><br>
+        
+        <br>
+    <body id="body"></body>
+    
+    <button id="mostrar"> Ver todos los países 🌍</button><br>
+    <br>
+    <div id="api-container"></div>
+    <button id="hist"> Ver historial 👀</button>
+    <button id="favs"> Ver favoritos &#9733 </button>
     
     
-    
-    
-
-
-
-
-
-    
-    
-    <div id="respuesta"></div>
-
-    
-    <button id="mostrar"> Mostrar lista de autos disponibles </button>
-    <div id="autos-container"></div>
-    <script src="main.js"></script>
+    <script  src="main.js"></script>
 </body>
 </html>
