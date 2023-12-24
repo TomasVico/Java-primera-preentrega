@@ -26,6 +26,7 @@ label{
 
 h1{
     font-size: 2em;
+    background-color:gray;
     color: rgb(8, 8, 8);
     text-align: center;
     text-transform: uppercase;
@@ -34,9 +35,22 @@ h1{
     text-shadow: 2px 2px 4px #ccc;
 }
 body{
-    background-color: white;
-    color: black;
-    text-align: center;
+    
+        background: url("fondo/Fondo.jpg");
+        background-size:contain; 
+        background-position: center top; 
+        color: black;
+        text-align: center;
+        margin: 0;
+        overflow: visible;
+        background-attachment: scroll;
+        
+   
+    
+}
+#fondo{
+    height: auto;
+    width: 100%;
 
 }
 #buscando{
