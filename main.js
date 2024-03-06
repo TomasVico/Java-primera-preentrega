@@ -46,7 +46,8 @@ fetch(url)
             <p>Población 👥: ${paisdata[0].population.toLocaleString()} habitantes</p>
             <p>Países limítrofes: ${paisesLimitrofesNombres.join(', ')}</p>
             <p>Superficie 🔍: ${paisdata[0].area.toLocaleString()} km²</p>
-            <p>Moneda 💰: ${monedaNombre}. Símbolo: (${monedaSimbolo})</p>
+            <p>Moneda 💰: ${monedaNombre}. </p>
+            <p>Símbolo: (${monedaSimbolo})</p>
             
             `;
 
