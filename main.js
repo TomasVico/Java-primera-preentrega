@@ -47,18 +47,12 @@ fetch(url)
             <p>Países limítrofes: ${paisesLimitrofesNombres.join(', ')}</p>
             <p>Superficie 🔍: ${paisdata[0].area.toLocaleString()} km²</p>
             <p>Moneda 💰: ${monedaNombre}. Símbolo: (${monedaSimbolo})</p>
-            <button class="fav-btn">Agregar a favoritos &#9733 </button>
+            
             `;
 
         apicontainer.appendChild(elementopais)
         body.appendChild(elementopais)
-        let agregarfav = elementopais.querySelector(".fav-btn");
-            agregarfav.addEventListener("click", function () {
-                let guardado = JSON.parse(localStorage.getItem("favoritos")) || [];
-                guardado.push(paisnombre);
-                localStorage.setItem("favoritos", JSON.stringify(guardado));
-            });
-            agregarfav.disabled=true
+        
         })
         
     })
@@ -123,7 +117,8 @@ fetch(url)
                 imgbandera.src = x.flags.svg;
                 imgbandera.alt = x.translations.spa.common;
                 card.appendChild(imgbandera)
-
+                
+                
                 
 
                 container.appendChild(card);
@@ -134,6 +129,7 @@ fetch(url)
                 localStorage.setItem("busqueda", JSON.stringify(historialbusquedas));
                 const historialGuardado = JSON.parse(localStorage.getItem("busqueda")) || [];
 
+                
             ;
         } else {
             Swal.fire("No hay coincidencias para tu búsqueda");
@@ -312,13 +308,14 @@ botonn.addEventListener("click", function () {
             li.textContent = historial[i].toUpperCase(); 
             hist.appendChild(li);
         }
-        body.appendChild(hist);
+        body.appendChild(hist)
+        botonn.disabled=true;
     } else {
         Swal.fire("No hay nada en el historial");
     }
 });
 
-
+/*
 let mostrarfav=document.getElementById("favs")
 mostrarfav.addEventListener("click",function(){
     const body= document.getElementById("body")
@@ -335,4 +332,4 @@ mostrarfav.addEventListener("click",function(){
     }
 
 })
-
+*/
